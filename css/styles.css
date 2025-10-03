@@ -1,0 +1,194 @@
+﻿/* 1. Importación de Google Fonts (Michroma y Space Mono) */
+@import url('https://fonts.googleapis.com/css2?family=Michroma&family=Space+Mono:wght@400;700&display=swap');
+
+/* 2. Estilos Globales (Neon Variables) */
+/* 2. Estilos Globales (Neon Variables) */
+:root { 
+    --color-background-dark: #0D0D0D; /* ¡VERIFICA ESTO! Debe ser negro carbón */
+    --color-background-alt: #1A1A1A;  
+    --color-primary-neon: #00FFFF;     
+    --color-accent-neon: #FF00FF;      
+    --color-text: #EAEAEA;             
+    --color-text-secondary: #CCCCCC;  /* Este es el que queríamos que fuera claro */
+}
+
+body {
+    font-family: 'Space Mono', monospace; /* Cuerpo de texto moderno */
+    margin: 0;
+    padding: 0;
+    background-color: var(--color-background-dark); 
+    color: var(--color-text);
+    line-height: 1.6;
+}
+
+h1, h2, h3 {
+    font-family: 'Michroma', sans-serif; /* Títulos futuristas */
+    color: var(--color-primary-neon); 
+    text-align: center;
+    margin-top: 0;
+    /* Sombra de texto luminosa (el 'glow') para que parezca neón */
+    text-shadow: 0 0 5px var(--color-primary-neon), 0 0 10px rgba(0, 255, 255, 0.5); 
+}
+
+section {
+    padding: 80px 5%;
+    text-align: center;
+}
+
+/* 3. Navegación (Header) */
+header {
+    background-color: var(--color-background-dark);
+    /* Borde inferior que parece una línea de luz neón */
+    border-bottom: 2px solid var(--color-accent-neon); 
+    box-shadow: 0 0 15px rgba(255, 0, 255, 0.4);
+    padding: 20px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+
+nav a {
+    color: var(--color-text);
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1.1em;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: var(--color-primary-neon); 
+    text-shadow: 0 0 5px var(--color-primary-neon); /* Pequeño glow al hacer hover */
+}
+
+/* 4. Sección Principal (Hero) */
+#hero {
+    padding-top: 100px;
+}
+
+#hero h1 {
+    font-size: 3em;
+    /* Usamos un degradado para un toque más original */
+    background: linear-gradient(45deg, var(--color-primary-neon), var(--color-accent-neon));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: none; /* Quitamos el glow del H1 para usar el gradiente */
+    margin-bottom: 5px;
+}
+/* El subtítulo con el acento Magenta Neón */
+#hero p {
+    color: var(--color-accent-neon);
+    font-size: 1.4em;
+    font-weight: 400;
+    letter-spacing: 2px; /* Espaciado para más estilo */
+}
+
+#hero img {
+    border-radius: 50%;
+    /* Marco llamativo con gradiente */
+    border: 5px solid var(--color-accent-neon); 
+    margin-top: 30px;
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    /* Gran sombra de neón */
+    box-shadow: 0 0 30px var(--color-primary-neon); 
+}
+
+/* 5. Sección de Proyectos (Grid) */
+#proyectos {
+    background-color: var(--color-background-dark);
+}
+
+.proyectos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 40px auto 0;
+}
+
+.proyecto-card {
+    /* Usamos el Gris Oscuro para las tarjetas */
+    background-color: var(--color-background-alt); /* ¡Debe ser #1A1A1A! */
+    border-radius: 12px;
+    overflow: hidden;
+    /* Borde sutil del color primario */
+    border: 1px solid rgba(0, 255, 255, 0.2);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.7); 
+    transition: transform 0.3s, box-shadow 0.3s;
+    text-align: left;
+    padding: 0;
+}
+
+.proyecto-card:hover {
+    transform: translateY(-5px);
+    /* Efecto "hover" de neón */
+    box-shadow: 0 0 25px var(--color-primary-neon); 
+}
+
+.proyecto-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 25px;
+}
+
+.proyecto-card h3 {
+    text-align: left;
+    color: var(--color-text); 
+    text-shadow: none;
+    margin-bottom: 10px;
+}
+
+.proyecto-card p {
+    font-size: 0.9em;
+    color: #999999;
+}
+
+.proyecto-card a {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: var(--color-primary-neon); 
+    color: var(--color-background-dark); /* Texto negro sobre neón */
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 700;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.proyecto-card a:hover {
+    background-color: var(--color-accent-neon); /* Botón se vuelve Magenta */
+    box-shadow: 0 0 15px var(--color-accent-neon);
+}
+
+/* 6. Pie de Página (Footer) */
+footer {
+    background-color: var(--color-background-alt);
+    color: var(--color-text);
+    text-align: center;
+    padding: 30px 0;
+    font-size: 1em;
+    /* Borde superior de acento */
+    border-top: 2px solid var(--color-accent-neon); 
+}
+/* Ajuste Responsivo para móviles (Al final de tu style.css) */
+@media (max-width: 768px) {
+    .proyectos-grid {
+        /* Cambia de 3 columnas a 1 columna en pantallas pequeñas */
+        grid-template-columns: 1fr; 
+    }
+    /* Puedes reducir el tamaño de las fuentes en móvil */
+    #hero h1 {
+        font-size: 2em; 
+    }
+}
