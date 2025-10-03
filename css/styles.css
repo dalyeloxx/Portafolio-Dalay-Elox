@@ -181,6 +181,54 @@ footer {
     /* Borde superior de acento */
     border-top: 2px solid var(--color-accent-neon); 
 }
+/* Estilos para las nuevas secciones */
+#sobre-mi {
+    background-color: var(--color-background-alt); /* Fondo gris oscuro */
+    color: var(--color-text-secondary);
+    padding: 70px 5%;
+}
+
+#sobre-mi h2 {
+    color: var(--color-primary-neon);
+    margin-bottom: 30px;
+}
+
+#sobre-mi p {
+    max-width: 800px;
+    margin: 0 auto 20px auto;
+    font-size: 1.1em;
+    line-height: 1.8;
+}
+
+
+#contacto {
+    background-color: var(--color-background-dark); /* Fondo negro */
+    color: var(--color-text-secondary);
+    padding: 70px 5%;
+}
+
+#contacto h2 {
+    color: var(--color-accent-neon); /* Título en magenta */
+    margin-bottom: 30px;
+}
+
+#contacto p {
+    max-width: 800px;
+    margin: 0 auto 15px auto;
+    font-size: 1.1em;
+    line-height: 1.8;
+}
+
+.contact-link {
+    color: var(--color-primary-neon); /* Los enlaces de contacto en cian */
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.contact-link:hover {
+    color: var(--color-accent-neon); /* Se vuelven magenta al pasar el mouse */
+}
 /* Ajuste Responsivo para móviles (Al final de tu style.css) */
 @media (max-width: 768px) {
     .proyectos-grid {
@@ -191,4 +239,5 @@ footer {
     #hero h1 {
         font-size: 2em; 
     }
+
 }
